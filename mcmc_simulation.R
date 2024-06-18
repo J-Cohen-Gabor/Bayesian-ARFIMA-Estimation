@@ -25,7 +25,6 @@ library(tmvtnorm)
 library(sarima)
 library(coda)
 
-#ensure location has subfolders 'par_sims' and 'Y'
 location <- 'a:'
 
 start_time <- Sys.time()
@@ -62,23 +61,11 @@ if (p==1){
 if (q==1){
   true_pars$theta = theta
 }
-#if (READ.IN.Y){
-#  Y <- read.csv('H:/2024/Honours Revisited/SNP_study/gnp_data.csv')$nomean_logchange
-#  Y <- Y * 100
-#  
-#  #Y <- nsarfima::arfima.sim(360,d=0.3,ar=0.2)
-#  
-#  #Y <- Y - mean(Y)
-#  n <- length(Y)
-#}else{
-#  n <- 1000
-#}
-
 n <- 1000
 
 save_details <- function(loc){
-  write.csv(par_sims, paste(loc,'/par_sims/par_sims_convolution_d',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
-  write.csv(Y, paste(loc,'/Y/Y',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
+  write.csv(par_sims, paste(loc,'/par_sims_convolution_d',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
+  write.csv(Y, paste(loc,'/Y',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
   
   #png(
   #  paste(loc,'/plots/densities',d,'_phi',phi,'_theta',theta,'_rep',chain,'.png',sep=''), 
