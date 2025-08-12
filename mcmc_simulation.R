@@ -341,7 +341,8 @@ for (chain in n_chain_start:n_chain_end){
   set.seed(chain)
   Y <- nsarfima::arfima.sim(n=n, d=true_pars$d, ar=true_pars$phi, ma=true_pars$theta,
                             mu=true_pars$mu, sig2=true_pars$sig2)
-
+  num_accept_d <- 1
+  num_accept_arma <- 1
   #fix_Y_idx <- 1
   #fix_Y_idx <- 3
   #Y <- YDF$Y[(1+(fix_Y_idx-1)*n):(fix_Y_idx*n)]
