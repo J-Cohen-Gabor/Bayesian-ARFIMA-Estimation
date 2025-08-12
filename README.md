@@ -1,5 +1,5 @@
 # Bayesian-ARFIMA-Estimation
-Code for the paper ARFIMA Bayesian Estimation using MCMC and ABC methods. The programs can be run via command line using the following arguments:
+Code for the paper **"Novel Bayesian algorithms for ARFIMA long-memory processes: a comparison between MCMC and ABC approaches"**. The programs can be run via command line using the following arguments:
 
 MCMC:
 Rscript mcmc_simulation.R [true d value] [true phi value] [true theta value] [num sims] [repetition start id] [repetition end id]
