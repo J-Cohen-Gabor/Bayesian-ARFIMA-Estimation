@@ -56,7 +56,7 @@ n <- 1000
 
 save_details <- function(loc){
   write.csv(par_sims, paste(loc,'/par_sims_convolution_d',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
-  write.csv(Y, paste(loc,'/Y',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
+  #write.csv(Y, paste(loc,'/Y',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
   
   #png(
   #  paste(loc,'/plots/densities',d,'_phi',phi,'_theta',theta,'_rep',chain,'.png',sep=''), 
@@ -66,7 +66,7 @@ save_details <- function(loc){
   
   #dev.off()
   
-  write.csv(par_sims_noconv, paste(loc,'/par_sims/par_sims_noconvolution_d',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
+  write.csv(par_sims_noconv, paste(loc,'/par_sims_noconvolution_d',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
   #write.csv(Y, paste(loc,'/Y/Y',d,'_phi',phi,'_theta',theta,'_rep',chain,'.csv',sep=''))
   
   #png(
