@@ -8,4 +8,7 @@ ABC:
 Rscript [true d value] [true phi value] [true theta value] [num sims] [repetition start id] [repetition end id]
 
 The output location for the simulation files can be set using the *location* parameter at the top of the code.
+
 Additional parameters such as the innovation variance, series length, and ABC quantiles can also be set at the top of the code.
+
+The output consists of a file for each simulation, model, and repetition. Each file contains the posterior draws at a given simulation step. MCMC output also includes the proposal values and their respective posterior values. 
